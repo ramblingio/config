@@ -25,7 +25,9 @@ repositories {
 	mavenCentral()
 }
 
-stage.dependsOn bootRepackage
+task stage {
+  dependsOn bootRepackage
+}
 
 dependencies {
 	compile('org.springframework.cloud:spring-cloud-starter-eureka-server')
@@ -38,6 +40,9 @@ dependencyManagement {
 	}
 }
 
+bootRun {
+  systemProperties = System.properties
+}
 
 eclipse {
 	classpath {

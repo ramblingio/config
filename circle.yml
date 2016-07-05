@@ -1,0 +1,10 @@
+machine:
+    java:
+      version: openjdk8
+
+deployment:
+    production:
+        branch: master
+        commands:
+            - git push dokku@rambling.io:config $CIRCLE_SHA1:master
+
