@@ -6,5 +6,5 @@ deployment:
     production:
         branch: master
         commands:
-            - git push dokku@rambling.io:config $CIRCLE_SHA1:master
+            - git push dokku@rambling.io:eureka $CIRCLE_SHA1:master
 
